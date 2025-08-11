@@ -22,11 +22,12 @@ export default function AgenticSearch() {
   const [response, setResponse] = useState<SearchResponse>(defaultResponse);
   const [loading, setLoading] = useState(false);
   const fileInput = useRef<HTMLInputElement>(null);
+  const API_BASE = import.meta.env.VITE_API_BASE || '';
 
   const submit = async () => {
     if (!query.trim()) return;
     setLoading(true);
-    const res = await fetch('/api/search', {
+    const res = await fetch(`${API_BASE}/search`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query, mode })

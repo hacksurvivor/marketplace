@@ -31,6 +31,16 @@ npm install
 npm run dev  # starts Vite dev server
 ```
 
+The frontend expects a running backend. During local development the Vite
+dev server proxies requests from `/search` to `http://localhost:8000/search`.
+In other environments, set `VITE_API_BASE` to the backend URL before building
+or running the frontend:
+
+```bash
+export VITE_API_BASE="http://localhost:8000"
+npm run dev
+```
+
 ## Frontend Tests
 
 ```bash
