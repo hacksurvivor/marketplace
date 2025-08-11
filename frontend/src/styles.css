@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: radial-gradient(circle at 20% 20%, #1e3a8a, #111827);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.agentic-card {
+  backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.controls input[type="text"] {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.controls input[type="text"]:focus {
+  outline: none;
+}
+
+.buttons button {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  cursor: pointer;
+}
+
+.buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.modes {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.modes label {
+  cursor: pointer;
+}
+
+.response {
+  margin-top: 2rem;
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.steps {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.steps li {
+  margin-bottom: 0.5rem;
+}
